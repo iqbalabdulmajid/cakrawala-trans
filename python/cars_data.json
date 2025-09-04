@@ -1,0 +1,38 @@
+[
+    {
+        "brand":"Toyota",
+        "model":"Supra",
+        "year":2020,
+        "rental_price":1000000,
+        "status":"available",
+        "description":"supra stutututu",
+        "updated_at":1749642,
+        "created_at":1749642,
+        "id":3,
+        "image":"cars\/n8mcgZuwABQGjoA2rVAqZPZQxaLZd8ZguMnTUl6J.jpg"
+    },
+    {
+        "brand":"Honda",
+        "model":"civic",
+        "year":2011,
+        "rental_price":900000,
+        "status":"available",
+        "description":"honda civic mulus type R",
+        "updated_at":1749644318000,
+        "created_at":1749644318000,
+        "id":4,
+        "image":"cars\/SrYDbiURprOx0GpueQCCh7QEczuqvAtFRWS0iXBe.jpg"
+    },
+    {
+        "brand":"Nisan",
+        "model":"Skyline r34",
+        "year":1994,
+        "rental_price":90000000,
+        "status":"available",
+        "description":"nisan skyline brian",
+        "updated_at":1749648431000,
+        "created_at":1749648431000,
+        "id":5,
+        "image":"cars\/R3elQrUPWAMiVIl7LggmWGzf36lynEBG4e1iCliu.jpg"
+    }
+]
