@@ -7,60 +7,121 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+Cakrawala Trans - Aplikasi Web Rental Mobil
+Deskripsi Singkat
+Cakrawala Trans adalah aplikasi web penyewaan mobil modern yang dibangun menggunakan Laravel. Aplikasi ini dirancang untuk memberikan kemudahan bagi pelanggan dalam mencari, memesan, dan membayar sewa mobil secara online. Untuk admin, aplikasi ini menyediakan dashboard yang komprehensif untuk mengelola inventaris mobil, memantau pesanan, dan melihat laporan.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Fitur unggulan dari aplikasi ini adalah implementasi Optical Character Recognition (OCR) menggunakan Tesseract.js yang memungkinkan pengguna mengunggah foto KTP mereka, dan sistem secara otomatis akan mengisi data NIK dan Nama Lengkap, mempercepat proses pemesanan dan mengurangi kesalahan input manual.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Fitur Utama
+Untuk Pelanggan (User)
+Pendaftaran & Login: Sistem autentikasi untuk pengguna.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Katalog Mobil: Menampilkan daftar model mobil yang tersedia, dikelompokkan berdasarkan model dengan informasi stok (Sisa 3 dari 4 unit).
 
-## Learning Laravel
+Detail Mobil: Halaman detail untuk setiap mobil yang menampilkan spesifikasi, harga, stok tersedia, dan informasi ketersediaan sopir.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Sistem Pemesanan: Form pemesanan dengan validasi, pilihan tanggal dan jam sewa, serta upload dokumen (KTP & SIM).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Fitur OCR Otomatis: Mengisi NIK dan Nama secara otomatis dengan membaca gambar KTP yang diunggah pengguna, berjalan sepenuhnya di browser (client-side).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Pembayaran Online: Integrasi dengan payment gateway Midtrans untuk proses pembayaran yang aman.
 
-## Laravel Sponsors
+Riwayat Pesanan: Halaman untuk melihat status dan detail semua pesanan yang pernah dibuat.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Untuk Administrator
+Dashboard Admin: Menampilkan statistik kunci seperti total pendapatan, jumlah pesanan, dan jumlah pelanggan.
 
-### Premium Partners
+Manajemen Inventaris (CRUD): Tambah, lihat, edit, dan hapus data mobil.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Manajemen Pesanan: Melihat semua pesanan yang masuk, memfilter, dan mengubah statusnya (Pending, Confirmed, Completed, Cancelled).
 
-## Contributing
+Checklist Pengembalian: Form checklist kondisi kendaraan (body, interior, ban, dokumen) yang diisi oleh admin saat mobil dikembalikan untuk menyelesaikan pesanan.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Verifikasi Dokumen: Melihat foto KTP dan SIM yang diunggah oleh pelanggan.
 
-## Code of Conduct
+Teknologi yang Digunakan
+Backend: PHP 8.x, Laravel 10.x
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Frontend: HTML, CSS, JavaScript, Blade Templating
 
-## Security Vulnerabilities
+Database: MySQL / MariaDB
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Payment Gateway: Midtrans (Snap.js)
 
-## License
+OCR Engine: Tesseract.js (berjalan di sisi klien/browser)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Server Lokal: Laragon (XAMPP/MAMPP juga bisa digunakan)
+
+Panduan Instalasi (Lokal)
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda.
+
+Prasyarat:
+
+PHP >= 8.1
+
+Composer
+
+Node.js & NPM
+
+Web Server Lokal (Contoh: Laragon)
+
+Clone Repository:
+
+git clone [https://github.com/username-anda/cakrawala-trans-app.git](https://github.com/username-anda/cakrawala-trans-app.git)
+cd cakrawala-trans-app
+
+Install Dependencies:
+
+composer install
+npm install
+npm run dev
+
+Setup Environment File:
+
+Salin file .env.example menjadi .env.
+
+Jalankan perintah ini untuk membuat kunci aplikasi:
+
+php artisan key:generate
+
+Konfigurasi koneksi database Anda (DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+
+Masukkan kunci Midtrans Anda:
+
+MIDTRANS_SERVER_KEY=SB-Mid-server-xxxxxxxxxxxx
+MIDTRANS_CLIENT_KEY=SB-Mid-client-xxxxxxxxxxxx
+MIDTRANS_IS_PRODUCTION=false
+
+Migrasi & Seeding Database:
+Jalankan perintah ini untuk membuat semua tabel dan mengisinya dengan data contoh (termasuk user admin).
+
+php artisan migrate:fresh --seed
+
+Akun Admin Default: admin@example.com / password
+
+Akun User Default: user@example.com / password
+
+Storage Link:
+Buat symbolic link agar file yang di-upload (gambar mobil, KTP, SIM) bisa diakses dari web.
+
+php artisan storage:link
+
+Jalankan Server:
+
+php artisan serve
+
+Aplikasi Anda sekarang bisa diakses di http://127.0.0.1:8000.
+
+Catatan Penting
+Pengujian Pembayaran Midtrans (Lokal)
+Untuk menguji notifikasi pembayaran (webhook) dari Midtrans di lingkungan lokal, Anda wajib menggunakan layanan tunneling seperti Ngrok.
+
+Jalankan ngrok http 8000 dan masukkan URL https yang diberikan ke Payment Notification URL di dashboard Midtrans Anda, dengan path: https://<url-ngrok-anda>/api/midtrans/webhook.
+
+Saat aplikasi sudah di-hosting, Anda tidak perlu lagi menggunakan Ngrok. Cukup gunakan URL domain asli Anda.
+
+Implementasi OCR
+Fitur OCR untuk membaca KTP berjalan 100% di sisi klien (browser) menggunakan Tesseract.js.
+
+Ini berarti Anda tidak perlu menginstal Tesseract OCR di komputer lokal atau server hosting. Cukup koneksi internet bagi pengguna untuk mengunduh file bahasa saat pertama kali digunakan.
